@@ -2,8 +2,8 @@ import { Disclosure } from '@headlessui/react'
 import { MenuIcon, XIcon } from '@heroicons/react/outline'
 
 const navigation = [
-    { name: 'Github Repository', href: '#', current: true },
-    { name: 'Youtube Demo', href: '#', current: false }
+    { name: 'Github Repository', href: 'https://github.com/RoastedCaramel/Atmos-Weather-App.git', current: true },
+    { name: 'Youtube Demo', href: 'https://youtu.be/7IT6S-q-gF8', current: false }
 ]
 
 function classNames(...classes) {
