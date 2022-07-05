@@ -32,19 +32,20 @@ function App() {
   }
 
   return (
-    <div className={`mx-auto max-w-screen-md mt-4 py-5 px-32 bg-gradient-to-br   h-fit shadow-xl shadow-gray-400 ${formatBackground()}`}>
-      <TopButtons setQuery={setQuery} />
-      <Inputs setQuery={setQuery} units={units} setUnits={setUnits} />
-      {weather && (
-        <div>
-          <TimeLocation weather={weather} />
-          <TemperatureDetails weather={weather} />
+    <div>
+      <div className={`mx-auto max-w-screen-md my-1 py-5 sm:px-32 px-10  bg-gradient-to-br rounded-2xl  h-fit shadow-xl shadow-gray-400 ${formatBackground()}`}>
+        <TopButtons setQuery={setQuery} />
+        <Inputs setQuery={setQuery} units={units} setUnits={setUnits} />
+        {weather && (
+          <div>
+            <TimeLocation weather={weather} />
+            <TemperatureDetails weather={weather} />
 
-          <Forecast title="Hourly Forecast" items={weather.hourly} />
-          <Forecast title="Daily Forecast" items={weather.daily} />
-        </div>
-      )}
-
+            <Forecast title="Hourly Forecast" items={weather.hourly} />
+            <Forecast title="Daily Forecast" items={weather.daily} />
+          </div>
+        )}
+      </div>
     </div>
   );
 }
